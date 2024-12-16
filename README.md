@@ -41,6 +41,16 @@ A React-based 3D visualization application for viewing and interacting with poin
 - Interactive timeline slider
 - Frame counter
 
+### Interface
+
+![3D Scene Visualization Interface](./readme.png)
+
+The application interface features:
+- Camera view preset buttons at the top
+- Camera control instructions in the top-right corner
+- 3D visualization area in the center
+- Timeline controls and playback speed options at the bottom
+
 ## Technical Details
 
 ### Dependencies
