@@ -1,0 +1,124 @@
+# 3D Scene Visualization App
+
+A React-based 3D visualization application for viewing and interacting with point cloud data and cuboid annotations. Built with React Three Fiber and TypeScript.
+
+## Features
+
+### 3D Visualization
+- Point cloud visualization with height-based coloring
+- Cuboid annotations with labels and dimensions
+- Interactive tooltips showing cuboid details
+- Dynamic lighting and shadows
+
+### Camera Controls
+- Multiple predefined camera positions:
+  - Default View
+  - Top View
+  - Side View
+  - Front View
+  - Isometric View
+  - Closeup View
+- Keyboard navigation:
+  - WASD - Move camera forward/backward/left/right
+  - QE - Move camera up/down
+  - Arrow Keys - Rotate camera
+  - Z/X - Zoom in/out
+- Mouse controls:
+  - Left click + drag - Orbit
+  - Right click + drag - Pan
+  - Scroll - Zoom
+- Camera lock/unlock toggle
+
+### Animation Controls
+- Frame-by-frame navigation
+- Play/Pause animation (Space bar)
+- Skip to start/end
+- Adjustable playback speeds:
+  - 0.5x
+  - 1x
+  - 2x
+  - 4x
+- Interactive timeline slider
+- Frame counter
+
+## Technical Details
+
+### Dependencies
+- React 18
+- Three.js
+- React Three Fiber
+- React Three Drei
+- TypeScript
+- Parcel (bundler)
+
+### Project Structure
+```
+src/
+├── components/
+│   ├── Scene.tsx      # Main 3D scene component
+│   └── Timeline.tsx   # Animation control component
+├── App.tsx           # Main application component
+├── index.tsx         # Application entry point
+└── styles.css        # Global styles
+```
+
+### Data Format
+The application expects JSON data in the following format:
+```json
+{
+  "points": [
+    { "x": number, "y": number, "z": number }
+  ],
+  "cuboids": [
+    {
+      "center": { "x": number, "y": number, "z": number },
+      "dimensions": { "x": number, "y": number, "z": number },
+      "yaw": number,
+      "label": string
+    }
+  ]
+}
+```
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm start
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Usage Tips
+
+### Camera Controls
+- Use predefined views for quick navigation to common viewpoints
+- Combine keyboard and mouse controls for precise camera positioning
+- Lock camera when needed to prevent accidental movement
+
+### Animation Playback
+- Use spacebar to quickly toggle play/pause
+- Adjust playback speed based on scene complexity
+- Use the timeline slider for quick navigation to specific frames
+
+### Performance
+- The application automatically handles frame caching
+- Point cloud rendering is optimized for performance
+- Tooltips and labels are rendered only when hovering
+
+## Browser Support
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+## License
+MIT License
