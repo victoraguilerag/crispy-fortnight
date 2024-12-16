@@ -122,3 +122,40 @@ The application expects JSON data in the following format:
 
 ## License
 MIT License
+
+## Testing
+
+The project uses Jest and React Testing Library for unit testing. To run the tests:
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage report
+npm test -- --coverage
+
+# Run tests in watch mode (useful during development)
+npm test -- --watch
+
+# Run a specific test file
+npm test -- path/to/test/file.test.tsx
+```
+
+### Test Structure
+
+The tests are organized in the following way:
+- Component tests are located in `src/components/__tests__/`
+- Hook tests are located in `src/hooks/__tests__/`
+- Each test file follows the naming convention: `*.test.tsx`
+
+### Test Coverage
+
+The test suite covers:
+- Component rendering
+- User interactions
+- Data fetching
+- Error handling
+- State management
+- Custom hooks behavior
+
+To view a detailed coverage report, run the tests with the `--coverage` flag.
